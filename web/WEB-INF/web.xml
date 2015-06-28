@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <!--
+        <security-constraint>
+            <display-name>allPages</display-name>
+            <web-resource-collection>
+                <web-resource-name>Pages</web-resource-name>
+                <description/>
+                <url-pattern>/*</url-pattern>
+            </web-resource-collection>
+            <auth-constraint>
+                <description/>
+                <role-name>user</role-name>
+                <role-name>admin</role-name>
+            </auth-constraint>
+        </security-constraint>
+
+        <login-config>
+           <auth-method>BASIC</auth-method>
+           <realm-name>TomcatUserDatabase</realm-name>
+
+            <form-login-config>
+                <form-login-page>/Login/login.html</form-login-page>
+                <form-error-page>/Login/error.html</form-error-page>
+            </form-login-config>
+
+        </login-config>
+        <security-role>
+            <description/>
+            <role-name>admin</role-name>
+        </security-role>
+        <security-role>
+            <description/>
+            <role-name>user</role-name>
+        </security-role>
+    -->
+
+    <servlet>
+        <servlet-name>ServletUser</servlet-name>
+        <servlet-class>wa2.servlet.ServletUser</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletUser</servlet-name>
+        <url-pattern>/user</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletSport</servlet-name>
+        <servlet-class>wa2.servlet.ServletSport</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletSport</servlet-name>
+        <url-pattern>/sport</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletZapas</servlet-name>
+        <servlet-class>wa2.servlet.ServletZapas</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletZapas</servlet-name>
+        <url-pattern>/zapas</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletUdalost</servlet-name>
+        <servlet-class>wa2.servlet.ServletUdalost</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletUdalost</servlet-name>
+        <url-pattern>/udalost</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletUdalostiSport</servlet-name>
+        <servlet-class>wa2.servlet.ServletUdalostiSport</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletUdalostiSport</servlet-name>
+        <url-pattern>/udalostisport</url-pattern>
+    </servlet-mapping>
+
+</web-app>

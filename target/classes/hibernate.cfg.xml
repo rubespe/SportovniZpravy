@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="show_sql">false</property>
+        <property name="format_sql">false</property>
+        <property name="foreign_key">true</property>
+        <property name="org.foreign_key">true</property>
+        <property name="connection.url">jdbc:sqlite:C:/wa2/db/sportovniZpravy.db</property>
+        <property name="connection.driver_class">org.sqlite.JDBC</property>
+        <property name="dialect">org.hibernate.dialect.SQLiteDialect</property>
+
+        <property name="connection.username"/>
+        <property name="connection.password"/>
+
+        <property name="hibernate.hbm2ddl.auto">validate</property>
+
+        <mapping class="wa2.Entity.Sport"/>
+        <mapping class="wa2.Entity.Zapas"/>
+        <mapping class="wa2.Entity.User"/>
+        <mapping class="wa2.Entity.Udalost"/>
+        <mapping class="wa2.Entity.TomcatUser"/>
+        
+        
+    </session-factory>
+</hibernate-configuration>
